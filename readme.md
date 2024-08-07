@@ -1,5 +1,3 @@
-# @hyune/react
-
 A React utilities library.
 ```json
 "react": ">=17.0.0 <19.0.0",
@@ -23,24 +21,76 @@ npm install @hyune/react
 
 
 
+# Hooks
 
 
-# `useDebounce`
-`useDebounce` 훅은 값을 지연시키거나 함수를 디바운스하는 데 사용됩니다.   
-[Example](https://codesandbox.io/p/devbox/zealous-roman-h87hwt?layout=%257B%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522rootPanelGroup%2522%253A%257B%2522direction%2522%253A%2522horizontal%2522%252C%2522contentType%2522%253A%2522UNKNOWN%2522%252C%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522id%2522%253A%2522ROOT_LAYOUT%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522UNKNOWN%2522%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522clzjhs8nb00073b6mxkd02cqi%2522%252C%2522sizes%2522%253A%255B70%252C30%255D%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522EDITOR%2522%252C%2522direction%2522%253A%2522horizontal%2522%252C%2522id%2522%253A%2522EDITOR%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522EDITOR%2522%252C%2522id%2522%253A%2522clzjhs8nb00023b6mo719z157%2522%257D%255D%257D%252C%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522SHELLS%2522%252C%2522direction%2522%253A%2522horizontal%2522%252C%2522id%2522%253A%2522SHELLS%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522SHELLS%2522%252C%2522id%2522%253A%2522clzjhs8nb00043b6m52u0mxbb%2522%257D%255D%252C%2522sizes%2522%253A%255B100%255D%257D%255D%257D%252C%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522DEVTOOLS%2522%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522DEVTOOLS%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522DEVTOOLS%2522%252C%2522id%2522%253A%2522clzjhs8nb00063b6msfjz5d1b%2522%257D%255D%252C%2522sizes%2522%253A%255B100%255D%257D%255D%252C%2522sizes%2522%253A%255B53.157810187150744%252C46.842189812849256%255D%257D%252C%2522tabbedPanels%2522%253A%257B%2522clzjhs8nb00023b6mo719z157%2522%253A%257B%2522id%2522%253A%2522clzjhs8nb00023b6mo719z157%2522%252C%2522activeTabId%2522%253A%2522clzjij9rz00023b6jujrramgs%2522%252C%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522clzjhs8nb00013b6m73ymky53%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522FILE%2522%252C%2522filepath%2522%253A%2522%252FREADME.md%2522%252C%2522state%2522%253A%2522IDLE%2522%257D%252C%257B%2522type%2522%253A%2522FILE%2522%252C%2522filepath%2522%253A%2522%252Froot%252F.cache%252Fnpm%252F_logs%252F2024-08-07T06_57_31_550Z-debug-0.log%2522%252C%2522id%2522%253A%2522clzjici5d00jf3b6mks9axk27%2522%252C%2522mode%2522%253A%2522temporary%2522%252C%2522state%2522%253A%2522IDLE%2522%257D%252C%257B%2522id%2522%253A%2522clzjij9rz00023b6jujrramgs%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522FILE%2522%252C%2522initialSelections%2522%253A%255B%257B%2522startLineNumber%2522%253A13%252C%2522startColumn%2522%253A12%252C%2522endLineNumber%2522%253A13%252C%2522endColumn%2522%253A12%257D%255D%252C%2522filepath%2522%253A%2522%252Fsrc%252FApp.tsx%2522%252C%2522state%2522%253A%2522IDLE%2522%257D%255D%257D%252C%2522clzjhs8nb00063b6msfjz5d1b%2522%253A%257B%2522id%2522%253A%2522clzjhs8nb00063b6msfjz5d1b%2522%252C%2522activeTabId%2522%253A%2522clzjije7500093b6jzp4qqjti%2522%252C%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522clzjhs8nb00053b6m9xmuj7h9%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522TASK_PORT%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522port%2522%253A5173%252C%2522path%2522%253A%2522%252F%2522%257D%252C%257B%2522type%2522%253A%2522DOCS%2522%252C%2522path%2522%253A%2522%252Feditors%252Fweb%252Fvscode-web%2522%252C%2522id%2522%253A%2522clzjije7500083b6j8nffzxgq%2522%252C%2522mode%2522%253A%2522permanent%2522%257D%252C%257B%2522type%2522%253A%2522DOCS%2522%252C%2522path%2522%253A%2522%252Feditors%252Fweb%252Fvscode-web%2522%252C%2522id%2522%253A%2522clzjije7500093b6jzp4qqjti%2522%252C%2522mode%2522%253A%2522permanent%2522%257D%255D%257D%252C%2522clzjhs8nb00043b6m52u0mxbb%2522%253A%257B%2522id%2522%253A%2522clzjhs8nb00043b6m52u0mxbb%2522%252C%2522activeTabId%2522%253A%2522clzjhs8nb00033b6m5kzj0edh%2522%252C%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522clzjhs8nb00033b6m5kzj0edh%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522TASK_LOG%2522%252C%2522taskId%2522%253A%2522dev%2522%257D%252C%257B%2522id%2522%253A%2522clzjhuy4p00h23b6mr5y2vcgj%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522TERMINAL%2522%252C%2522shellId%2522%253A%2522clzjhuyah015tdiip4f9v1r3g%2522%257D%255D%257D%257D%252C%2522showDevtools%2522%253Atrue%252C%2522showShells%2522%253Atrue%252C%2522showSidebar%2522%253Atrue%252C%2522sidebarPanelSize%2522%253A15%257D)
+## `useDebounce`
 
-## 사용법
+```tsx
+  const [input, setInput] = useState("");
 
-### 값 디바운싱
+  const handleChange = (e) => setInput(e.target.value);
+  const debounce = useDebounce(input, 300);
+  ```
 
-마지막 변경 이후 지정된 지연 시간이 지나야 값이 업데이트됩니다.
+## `useObserver`
 
-### 함수 디바운싱
+```tsx
+const handleAlert=()=>alert("Find Element");
+const divEl =useObserver(handleAlert)
 
-마지막 호출 이후 지정된 지연 시간이 지나야 함수가 실행됩니다.
-
-## Type
-
-```typescript
-useDebounce<T>(valueOrFunction: T | (() => void), delay: number): DebouncedValue<T>
+<div ref={divEl}/> 
 ```
+
+## `useWindowSize`
+```tsx
+const {width,height} =useWindowSize()
+```
+## `useModal`
+```tsx
+import React from 'react'
+import { useModal } from '@hyune/react/hooks'
+
+const ExampleComponent = () => {
+  const { openModal, closeModal, Modal } = useModal()
+
+  return (
+    <div>
+      <button onClick={openModal}>Open Modal</button>
+      <Modal
+        dismissOnOutsideClick={true}
+        modalClassName="example-modal"
+        overlay={true}
+        overlayClassName="example-overlay"
+      >
+        <div>
+          <h2>Modal Title</h2>
+          <p>This is the content of the modal.</p>
+          <button onClick={closeModal}>Close Modal</button>
+        </div>
+      </Modal>
+    </div>
+  )
+}
+
+export default ExampleComponent
+```
+
+# Utils
+
+## `fetcher`
+```tsx
+try {
+  const data = await fetcher('/api/data')
+  console.log('Data:', data)
+} catch (error) {
+  console.error('Error fetching data:', error)
+}
+
+```
+
+
+
+
+
+
