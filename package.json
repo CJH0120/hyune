@@ -1,6 +1,6 @@
 {
   "name": "@hyune/react",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "cjh980120@gmail.com",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
