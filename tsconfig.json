@@ -1,0 +1,22 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "ESNext",
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["node_modules/*"],
+      "hooks/*": ["hooks/*"],
+      "utils/*": ["utils/*"]
+    },
+    "target": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "jsx": "react",
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "typeRoots": ["node_modules/@types"]
+  }
+}
