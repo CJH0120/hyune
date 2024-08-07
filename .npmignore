@@ -8,3 +8,6 @@ tsconfig.json
 
 # GIT
 .git
+
+prettierrc
+bun.lockb
