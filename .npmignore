@@ -11,3 +11,11 @@ tsconfig.json
 
 prettierrc
 bun.lockb
+
+jest.config.ts
+.watchmanconfig
+
+dist/jest.*
+dist/setupTests.**
+
+.prettierrc
