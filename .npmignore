@@ -1,20 +1,38 @@
-# npm
+# Node modules
 node_modules/
 
-# dev
-src
+# Development source
+src/
+
+# Git
+.git/
+
+# IDE/editor settings
 .gitignore
-tsconfig.json
+.prettierrc
 
-# GIT
-.git
-
-prettierrc
-bun.lockb
-
+# Configurations and logs
 jest.config.ts
 .watchmanconfig
+bun.lockb
 
-dist/setupTests.*
+# TypeScript configuration
+tsconfig.json
 
-.prettierrc
+# Environment and local files
+.env
+
+# Exclude specific files in dist/
+dist/jest.config.js
+dist/jest.config.map
+dist/jest.config.d.ts
+
+# Exclude specific setup files in dist/
+dist/src/setupTests.ts
+dist/src/setupTests.js
+dist/src/setupTests.map
+dist/**/*.test.ts
+dist/**/*.test.tsx
+# Optional: Include other files in dist/
+!dist/
+!dist/**/*  # This will include all files in dist except those specifically excluded above
