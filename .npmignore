@@ -22,9 +22,14 @@ tsconfig.json
 # Environment and local files
 .env
 
-
+# Exclude specific files in dist/
 dist/jest.config.*
 dist/src/setupTests.*
 
+# Exclude all test files in dist/src/hooks/
 dist/src/hooks/**/*.test.ts
 dist/src/hooks/**/*.test.tsx
+
+# Ensure that other files in dist/ are included
+!dist/
+!dist/**/*  # Include all files in dist/ except those specifically excluded above
