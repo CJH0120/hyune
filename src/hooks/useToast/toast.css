@@ -1,0 +1,87 @@
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
+
+.hyune-toast-default {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	gap: 10px;
+	transition: all 1s ease-in;
+}
+
+.hyune-toast-top-left {
+	top: 0;
+	left: 0;
+}
+
+.hyune-toast-top-center {
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.hyune-toast-top-right {
+	top: 0;
+	right: 0;
+}
+
+/* middle */
+.hyune-toast-middle-left {
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+.hyune-toast-middle-center {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.hyune-toast-middle-right {
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+/* bottom */
+.hyune-toast-bottom-left {
+	bottom: 0;
+	left: 0;
+	flex-direction: column-reverse;
+}
+.hyune-toast-bottom-center {
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	flex-direction: column-reverse;
+}
+.hyune-toast-bottom-right {
+	bottom: 0;
+	right: 0;
+	flex-direction: column-reverse;
+}
+
+.toast-content {
+	padding: 10px;
+	border: 1px solid;
+	position: absolute;
+}
