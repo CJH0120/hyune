@@ -26,5 +26,5 @@ tsconfig.json
 dist/jest.config.*
 dist/src/setupTests.*
 
-dist/**/*.test.ts
-dist/**/*.test.tsx
+dist/src/hooks/**/*.test.ts
+dist/src/hooks/**/*.test.tsx
