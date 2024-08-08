@@ -22,17 +22,9 @@ tsconfig.json
 # Environment and local files
 .env
 
-# Exclude specific files in dist/
-dist/jest.config.js
-dist/jest.config.map
-dist/jest.config.d.ts
 
-# Exclude specific setup files in dist/
-dist/src/setupTests.ts
-dist/src/setupTests.js
-dist/src/setupTests.map
+dist/jest.config.*
+dist/src/setupTests.*
+
 dist/**/*.test.ts
 dist/**/*.test.tsx
-# Optional: Include other files in dist/
-!dist/
-!dist/**/*  # This will include all files in dist except those specifically excluded above
