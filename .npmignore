@@ -15,7 +15,6 @@ bun.lockb
 jest.config.ts
 .watchmanconfig
 
-dist/jest.*
-dist/setupTests.**
+dist/setupTests.*
 
 .prettierrc
