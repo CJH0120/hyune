@@ -10,21 +10,27 @@ export function useDebounce<T>(valueOrFunction: T | (() => void), delay: number)
     if (typeof valueOrFunction === "function") {
       const callback = valueOrFunction as () => void;
 
+      timeoutRef.current = setTimeout(() => {
+        callback();
+      }, delay);
+
       return () => {
         if (timeoutRef.current) {
           clearTimeout(timeoutRef.current);
         }
-        timeoutRef.current = setTimeout(() => {
-          callback();
-        }, delay);
       };
     } else {
       const value = valueOrFunction as T;
-      const handler = setTimeout(() => {
+
+      timeoutRef.current = setTimeout(() => {
         setDebouncedValue(value);
       }, delay);
 
-      return () => clearTimeout(handler);
+      return () => {
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+      };
     }
   }, [valueOrFunction, delay]);
 
