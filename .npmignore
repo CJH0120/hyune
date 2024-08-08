@@ -27,8 +27,7 @@ dist/jest.config.*
 dist/src/setupTests.*
 
 # Exclude all test files in dist/src/hooks/
-dist/src/hooks/**/*.test.ts
-dist/src/hooks/**/*.test.tsx
+dist/src/hooks/**/*.test.*
 
 # Ensure that other files in dist/ are included
 !dist/
