@@ -1,27 +1,25 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist",
-    "declaration": true,
-    "declarationMap": true,
-    "declarationDir": "./dist",
-    "module": "ESNext",
-    "target": "ES6",
-    "jsx": "react-jsx",
-    "sourceMap": true,
-    "emitDeclarationOnly": true,
-
-    "esModuleInterop": true,
-    "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*"],
-      "hooks/*": ["hooks/*"],
-      "utils/*": ["utils/*"]
-    },
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "moduleResolution": "Node",
-    "typeRoots": ["node_modules/@types"],
-    "types": ["jest", "node", "react", "react-dom"]
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
+	"compilerOptions": {
+		"outDir": "./dist",
+		"declaration": true,
+		"declarationMap": true,
+		"module": "ESNext",
+		"target": "ES6",
+		"jsx": "react-jsx",
+		"sourceMap": true,
+		"strict": true,
+		"esModuleInterop": true,
+		"baseUrl": ".",
+		"paths": {
+			"*": ["node_modules/*"],
+			"hooks/*": ["hooks/*"],
+			"utils/*": ["utils/*"]
+		},
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"moduleResolution": "Node",
+		"typeRoots": ["node_modules/@types"],
+		"types": ["jest", "node", "react", "react-dom"]
+	},
+	"include": ["src/**/*", "src/types/**/*"],
+	"exclude": ["node_modules", "dist"]
 }
