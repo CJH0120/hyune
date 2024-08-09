@@ -1,6 +1,4 @@
 {
-  "include": ["src/**/*", "jest.config.ts"],
-  "exclude": ["node_modules"],
   "compilerOptions": {
     "outDir": "./dist",
     "module": "ESNext",
@@ -10,15 +8,17 @@
       "hooks/*": ["hooks/*"],
       "utils/*": ["utils/*"]
     },
-    "types": ["jest", "node"],
-
-    "target": "ESNext",
+    "target": "ES6",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
     "sourceMap": true,
     "declaration": true,
+    "declarationMap": true,
     "moduleResolution": "Node",
     "esModuleInterop": true,
-    "typeRoots": ["node_modules/@types"]
-  }
+    "typeRoots": ["node_modules/@types"],
+    "types": ["jest", "node", "react", "react-dom"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }
