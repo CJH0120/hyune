@@ -2,8 +2,9 @@
   "name": "@hyune/react",
   "version": "0.0.28",
   "author": "cjh980120@gmail.com",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     "./hooks": "./dist/hooks/index.js",
     "./utils": "./dist/utils/index.js",

@@ -16,6 +16,7 @@
     "declarationMap": true,
     "moduleResolution": "Node",
     "esModuleInterop": true,
+    "declarationDir": "./dist/types",
     "typeRoots": ["node_modules/@types"],
     "types": ["jest", "node", "react", "react-dom"]
   },
