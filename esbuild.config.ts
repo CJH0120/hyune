@@ -1,9 +1,10 @@
 const esbuild = require("esbuild");
+const { dtsPlugin } = require("esbuild-plugin-d.ts");
 
 const buildOptions = {
   entryPoints: ["./src/index.ts"],
   bundle: true,
-  loader: { ".tsx": "tsx", ".ts": "ts" },
+  outdir: "dist",
   external: ["react", "react-dom"],
   sourcemap: true,
 };
@@ -13,7 +14,8 @@ esbuild
   .build({
     ...buildOptions,
     format: "esm",
-    outdir: "dist/esm",
+    splitting: true,
+    plugins: [dtsPlugin()],
   })
   .catch(() => process.exit(1));
 
@@ -22,6 +24,9 @@ esbuild
   .build({
     ...buildOptions,
     format: "cjs",
-    outdir: "dist/cjs",
+    outExtension: {
+      ".js": ".cjs",
+    },
+    plugins: [dtsPlugin()],
   })
   .catch(() => process.exit(1));

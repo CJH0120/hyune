@@ -26,6 +26,10 @@ tsconfig.json
 dist/jest.config.*
 dist/src/setupTests.*
 
+
+*.tgz
+esbuild.config.ts
+tsconfig.test.json
 # Exclude all test files in dist/src/hooks/
 dist/src/hooks/**/*.test.*
 
